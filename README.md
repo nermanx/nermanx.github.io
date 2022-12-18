@@ -1,10 +1,36 @@
-- 👋 Hi, I’m @nermanx
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+<h3 align="center">
+  Magamról:
+  <p align="center">
+    <p>
+      Üdvözöllek a Github profilomon!
+      <br>Lentebb megtalálod az elérhetőségeim, illetve a projektjeimet is.
+    </p>
+  </p>
+</h3>
 
-<!---
-nermanx/nermanx is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+---
+
+<h3 align="center">
+  Elérhetőségek:
+  <p></p>
+  <p align="center">
+    <a href= "https://discord.com/users/511513806569078786">
+      <img src="https://img.icons8.com/color/512/discord-new-logo.png" style="height:50px;width:50px;"/>
+    </a>
+  </p>
+</h3>
+
+---
+
+<h3 align="center">
+  Projektjeim:
+  <p></p>
+  <p align="center">
+    <a href= "https://aquantic.hu/">
+      <img src="https://aquantic.hu/src/img/logo.png" style="height:50px;width:50px;"/>
+    <br>(Minecraft Szerver)<br></a><br>
+    <a href= "https://nermanx.github.io/">
+      <img src="https://img.icons8.com/color/512/github.png" style="height:50px;width:50px;"/>
+    <br>(Github Weblap)<br></a>
+  </p>
+</h3>
