@@ -1,0 +1,198 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+html,body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(20, 20, 20);
+}
+*{
+    color:white;
+}
+
+
+#nx-sidebar{
+    min-height: 100vh;
+    background-color: black;
+    z-index: 0;
+    width: 15%;
+    position: fixed;
+}
+div#nx-sidebar img{
+    width: 70%;
+    margin-top: 1em;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 1em;
+}
+div#nx-sidebar button.active{
+    width: 75%;
+    display: flex;
+    margin-top: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    vertical-align: baseline;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    background-color: #1ab26b;
+    transition: 0.2s;
+}
+div#nx-sidebar button.active:hover{
+    background-color: #17975b;
+    transition: 0.2s;
+}
+div#nx-sidebar button.active i {
+    padding-right: 15px;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 4.5px;
+}
+div#nx-sidebar button.default i {
+    padding-right: 15px;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 4.5px;
+}
+div#nx-sidebar button.default{
+    width: 75%;
+    display: flex;
+    margin-top: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    vertical-align: baseline;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    background-color: darkslategrey;
+    transition: 0.2s;
+}
+div#nx-sidebar button.default:hover{
+    background-color: rgb(41, 68, 68);
+    transition: 0.2s;
+}
+div#nx-sidebar button.bottom-button{
+    width: 50%;
+    display: flex;
+    margin-top: 1em;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    vertical-align: baseline;
+}
+button:hover {
+    cursor: pointer;
+}
+
+
+div#nx-container {
+    position: absolute;
+    margin-top: 96px;
+    height: 100vh;
+    margin-left: 15%;
+}
+
+div.nx-nameBar{
+    opacity: 0.9;
+    backdrop-filter: blur(2px);
+    position: fixed;
+    margin-left: 15%;
+    height: 96px;
+    width: 100%;
+    background-color: rgb(30, 30, 30);
+    float: left;
+    z-index: 5;
+}
+
+div.nx-nameBar img{
+    width: 4em;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+div.nx-nameBar span{
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+div.nx-mediaControl{
+    opacity: 0.9;
+    backdrop-filter: blur(2px);
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(30, 30, 30);
+    height: 96px;
+    max-width: 100%;
+    margin-left: 155vh;
+    align-items: center;
+    z-index: 6;
+}
+
+div.nx-mediaControl img{
+    width: 7%;
+    filter: invert(100%);
+    cursor: pointer;
+}
+
+div.nx-playList ul{
+    width: 100vh;
+    list-style-type: none;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+}
+
+div.nx-playList ul li{
+    cursor: pointer;
+    list-style-type: none;
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: rgb(40, 40, 40);
+    max-width: 160vh;
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 10%;
+    
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+
+div.nx-playList ul li span.nx-musicName{
+    margin-left: 12px;
+    float: left;
+
+    font-size: 16pt;
+    font-family: 'Poppins', sans-serif;
+}
+
+div.nx-playList ul li span.nx-musicArtist{
+    margin: 0 0 0 auto;
+
+    font-size: 16pt;
+    font-family: 'Poppins', sans-serif;
+}
