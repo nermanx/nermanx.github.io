@@ -31,6 +31,9 @@
     <br>(Minecraft Szerver)<br></a><br>
     <a href= "https://nermanx.github.io/">
       <img src="https://img.icons8.com/color/512/github.png" style="height:50px;width:50px;"/>
-    <br>(Github Weblap)<br></a>
+    <br>(Github Weblap)<br></a><br>
+    <a href= "https://nermanx.github.io/spotify-recreate">
+      <img src="https://cdn-icons-png.flaticon.com/512/3669/3669986.png" style="height:50px;width:50px;"/>
+    <br>(Spotify Újraalkotva)<br></a>
   </p>
 </h3>
