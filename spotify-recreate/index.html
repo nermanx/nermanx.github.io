@@ -1,290 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://open.spotifycdn.com/cdn/images/favicon.0f31d2ea.ico" type="image/x-icon">
+    <title>Spotify Recreate (HTML!)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link id="css" rel="stylesheet" href="./assets/main.css">
+    <script>
+        // Pause - Play buttons
+        function playbutton() {
+            if (document.getElementById("playbutton").src == "https://i.imgur.com/3ah2aKl.png"){
+                document.getElementById("playbutton").src = "https://i.imgur.com/BUngXeQ.png";
+            } else {
+                document.getElementById("playbutton").src = "https://i.imgur.com/3ah2aKl.png";
+            }
+        }
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-    background-color: rgb(20, 20, 20);
-}
+        // Volume slider
+        function volumeUp() {
+            const setVolume = document.querySelector('img[onclick="volumeUp"]');
+            document.querySelector('.volumeUp').addEventListener("click", function() {
+                setVolume.value = parseInt(setVolume.value) + 5;
+            });
+        }
+        function volumeDown() {
+            const setVolume = document.querySelector('img[onclick="volumeDown"]');
+            document.querySelector('.volumeDown').addEventListener("click", function() {
+                setVolume.value = parseInt(setVolume.value) - 5;
+            });
+        }
+    </script>
+</head>
 
-* {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-}
+<body>
+    <div id="nx-sidebar">
+        <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png" />
+        <div>
+            <button class="default"><i class="fa fa-home"></i>Home</button>
+            <button class="active"><i class="fa fa-heart"></i>Favorites</button>
+            <button class="default"><i class="fa fa-star"></i>Top 10</button>
+        </div>
+        <div>
+            <button class="default bottom-button" style="position: absolute; bottom: 0;"><i class="fa fa-search"></i>Search</button>
+        </div>
+    </div>
+    <!-- Favorites page -->
+    <div class="nx-nameBar">
+        <a href="https://www.flaticon.com/free-icons/tinder" title="Tinder icons created by Freepik - Flaticon" target="_blank"></a>
+        <img src="https://cdn-icons-png.flaticon.com/512/599/599502.png" alt="Tinder icons created by Freepik - Flaticon">
+        <span>My Favorites</span>
+    </div>
 
+    <div id="nx-container">
+        <div class="nx-playList">
+            <ul>
+                <li><img src="https://i.scdn.co/image/ab67616d0000485187a9495fd25dfa23e68a9e66"><span class="nx-musicName">Chain$aw</span><span class="nx-musicArtist">Scarlxrd</span></li>
+                <li><img src="https://i.scdn.co/image/ab67616d000048517047605662af73404a303d73"><span class="nx-musicName">Verem a faszom</span><span class="nx-musicArtist">MEGUSUNK GANG</span></li>
+                <li><img src="https://i.scdn.co/image/ab67616d0000485167e4046891a0207cd9e27574"><span class="nx-musicName">Why Not</span><span class="nx-musicArtist">Ghostface Playa</span></li>
+                <li class="nowplaying"><img src="https://i.scdn.co/image/ab67616d00004851144fcad8ffb348edefb9e851"><span class="nx-musicName">RAVE</span><span class="nx-musicArtist">Dxrk ダーク</span></li>
+                <li><img src="https://i.scdn.co/image/ab67616d0000485145de6f708fe45e7db8d091db"><span class="nx-musicName">vendetta!</span><span class="nx-musicArtist">MUPP, Sadfriendd</span></li>
+                <li><img src="https://i.scdn.co/image/ab67616d00004851c31d3c870a3dbaf7b53186cc"><span class="nx-musicName">Gangsta's Paradise</span><span class="nx-musicArtist">Coolio, L.V.</span></li>
+                <li><img src="https://i.scdn.co/image/ab67616d000048511440ffaa43c53d65719e0150"><span class="nx-musicName">Murder in My Mind</span><span class="nx-musicArtist">Kordhell</span></li>
+                <li><img src="https://i.scdn.co/image/ab67616d0000485100b9665cba5db36da9675b2b"><span class="nx-musicName">GENOCIDE</span><span class="nx-musicArtist">Lil Darkie</span></li>
+                <li><img src="https://i.scdn.co/image/ab67616d00004851af204e9cba4e6bf64eab349e"><span class="nx-musicName">Miafasz</span><span class="nx-musicArtist">Azahriah, DESH</span></li>
+                <li><img src="https://i.scdn.co/image/ab67616d00004851af204e9cba4e6bf64eab349e"><span class="nx-musicName">Pullup</span><span class="nx-musicArtist">Azahriah, DESH</span></li>
+            </ul>
+        </div>
 
-#nx-sidebar {
-    min-height: 100vh;
-    background-color: black;
-    z-index: 0;
-    width: 15%;
-    position: fixed;
-}
+        <div class="nx-nowPlaying">
+            <img src="https://i.scdn.co/image/ab67616d00001e02144fcad8ffb348edefb9e851" class="musicAlbum">
+            <span class="musicName">RAVE</span>
+            <span class="musicArtist">Dxrk ダーク</span>
 
-div#nx-sidebar img {
-    width: 70%;
-    margin-top: 1em;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 1em;
-}
-
-div#nx-sidebar button.active {
-    width: 75%;
-    display: flex;
-    margin-top: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0.5em;
-    padding: 0.5em;
-    vertical-align: baseline;
-
-    font-weight: 600;
-    border: none;
-    border-radius: 12px;
-    font-size: 18px;
-    background-color: #1ab26b;
-    transition: 0.2s;
-}
-
-div#nx-sidebar button.active:hover {
-    background-color: #17975b;
-    transition: 0.2s;
-}
-
-div#nx-sidebar button.active i {
-    padding-right: 15px;
-    vertical-align: middle;
-    margin-right: 5px;
-    margin-left: 5px;
-    margin-top: 4.5px;
-}
-
-div#nx-sidebar button.default i {
-    padding-right: 15px;
-    vertical-align: middle;
-    margin-right: 5px;
-    margin-left: 5px;
-    margin-top: 4.5px;
-}
-
-div#nx-sidebar button.default {
-    width: 75%;
-    display: flex;
-    margin-top: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0.5em;
-    padding: 0.5em;
-    vertical-align: baseline;
-
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    border: none;
-    border-radius: 12px;
-    font-size: 18px;
-    background-color: darkslategrey;
-    transition: 0.2s;
-}
-
-div#nx-sidebar button.default:hover {
-    background-color: rgb(41, 68, 68);
-    transition: 0.2s;
-}
-
-div#nx-sidebar button.bottom-button {
-    width: 50%;
-    display: flex;
-    margin-top: 1em;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-bottom: 1em;
-    padding: 0.5em;
-    vertical-align: baseline;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-
-div#nx-container {
-    position: absolute;
-    margin-top: 96px;
-    height: 100vh;
-    margin-left: 15%;
-}
-
-div.nx-nameBar {
-    opacity: 0.9;
-    backdrop-filter: blur(2px);
-    position: fixed;
-    margin-left: 15%;
-    height: 96px;
-    width: 100%;
-    background-color: rgb(30, 30, 30);
-    float: left;
-    z-index: 5;
-}
-
-div.nx-nameBar img {
-    width: 4em;
-    margin-top: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
-    margin-bottom: 1em;
-}
-
-div.nx-nameBar span {
-    position: absolute;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-div.nx-mediaControl {
-    opacity: 0.9;
-    backdrop-filter: blur(2px);
-    position: fixed;
-    display: flex;
-    justify-content: flex-start;
-    background-color: rgb(30, 30, 30);
-    height: 96px;
-    max-width: 100%;
-    margin-left: 155vh;
-    align-items: center;
-    z-index: 6;
-}
-
-div.nx-mediaControl img {
-    width: 7%;
-    filter: invert(100%);
-    cursor: pointer;
-}
-
-div.nx-playList ul {
-    width: 100vh;
-    list-style-type: none;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-inline-start: 0;
-}
-
-div.nx-playList ul li {
-    cursor: pointer;
-    list-style-type: none;
-    margin-bottom: 1em;
-    padding: 1em;
-    border-radius: 1em;
-    background-color: rgb(40, 40, 40);
-    max-width: 160vh;
-    width: 100%;
-    margin-left: 5%;
-    margin-right: 10%;
-
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    transition: 0.2s;
-}
-
-div.nx-playList ul li:hover {
-    background-color: rgb(35, 35, 35);
-    transition: 0.2s;
-}
-
-div.nx-playList ul li span.nx-musicName {
-    margin-left: 12px;
-    float: left;
-
-    font-size: 16pt;
-    font-family: 'Poppins', sans-serif;
-}
-
-div.nx-playList ul li span.nx-musicArtist {
-    margin: 0 0 0 auto;
-
-    font-size: 16pt;
-    font-family: 'Poppins', sans-serif;
-}
-
-div.nx-playList ul li.nowplaying {
-    border-bottom: 5px solid #1ab26b;
-}
-
-
-div.nx-nowPlaying {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    background-color: rgb(40, 40, 40);
-    width: 25em;
-    height: 40em;
-    margin-left: 60%;
-    top: 20%;
-    border-radius: 1em;
-}
-
-div.nx-nowPlaying img.musicAlbum {
-    padding: 3em;
-    height: 38%;
-    border-radius: 5em;
-}
-
-div.nx-nowPlaying span.musicName {
-    font-size: 3em;
-    margin-top: -5%;
-}
-
-div.nx-nowPlaying span.musicArtist{
-    margin-bottom: 10%;
-}
-
-div.nx-audiocontroller {
-    width: 200px;
-    display: flex;
-    justify-content: center;
-}
-div.nx-audiocontroller i {
-    font-size: 3em;
-    margin-left: 15%;
-    margin-top: 50%;
-    margin-right: 15%;
-    margin-top: 15%;
-}
-
-div.nx-nowPlaying input {
-    margin-top: 15%;
-    background-color: rgb(40, 40, 40);
-    width: 250px !important;
-    height: 20px;
-    -webkit-appearance: none;
-}
-
-div.nx-nowPlaying input#audiocontrol::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 10px;
-    cursor: pointer;
-    animate: 0.2s;
-    box-shadow: 0px 0px 0px #000000;
-    background: #1AB26B;
-    border-radius: 5px;
-    border: 0px solid #000000;
-}
-
-div.nx-nowPlaying input#audiocontrol::-webkit-slider-thumb {
-    box-shadow: 0px 0px 0px #000000;
-    border: 0px solid #000000;
-    height: 25px;
-    width: 25px;
-    border-radius: 25px;
-    background: #FFFFFF;
-    cursor: pointer;
-    -webkit-appearance: none;
-    margin-top: -7.5px;
-}
+            <div class="nx-audiocontroller">
+                <i class="fa fa-step-backward"></i>
+                <i class="fa fa-play"></i>
+                <i class="fa fa-step-forward"></i>
+            </div>
+            <div class="nx-audioSlider">
+                <input type="range" name="" id="audiocontrol" value="0" min="0" max="100"><br>
+                <span class="audiocontrol-timer" style="float: left;">00:00</span>
+                <span class="audiocontrol-timer" style="float: right;">02:36</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
