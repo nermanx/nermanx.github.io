@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://open.spotifycdn.com/cdn/images/favicon.0f31d2ea.ico" type="image/x-icon">
+    <title>Spotify Recreate (HTML!)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link id="css" rel="stylesheet" href="./assets/main.css">
+    <script>
+        // Pause - Play buttons
+        function playbutton() {
+            if (document.getElementById("playbutton").src == "https://i.imgur.com/3ah2aKl.png"){
+                document.getElementById("playbutton").src = "https://i.imgur.com/BUngXeQ.png";
+            } else {
+                document.getElementById("playbutton").src = "https://i.imgur.com/3ah2aKl.png";
+            }
+        }
+
+        // Volume slider
+        function volumeUp() {
+            const setVolume = document.querySelector('img[onclick="volumeUp"]');
+            document.querySelector('.volumeUp').addEventListener("click", function() {
+                setVolume.value = parseInt(setVolume.value) + 5;
+            });
+        }
+        function volumeDown() {
+            const setVolume = document.querySelector('img[onclick="volumeDown"]');
+            document.querySelector('.volumeDown').addEventListener("click", function() {
+                setVolume.value = parseInt(setVolume.value) - 5;
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div id="nx-sidebar">
+        <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png" />
+        <div>
+            <button class="default"><i class="fa fa-home"></i>Home</button>
+            <button class="active"><i class="fa fa-heart"></i>Favorites</button>
+            <button class="default"><i class="fa fa-star"></i>Top 10</button>
+        </div>
+        <div>
+            <button class="default bottom-button" style="position: absolute; bottom: 0;"><i class="fa fa-search"></i>Search</button>
+        </div>
+    </div>
+    <!-- Favorites page -->
+    <div class="nx-nameBar">
+        <a href="https://www.flaticon.com/free-icons/tinder" title="Tinder icons created by Freepik - Flaticon" target="_blank"></a>
+        <img src="https://i.imgur.com/ZhUrfXf.png" alt="Tinder icons created by Freepik - Flaticon">
+        <span>My Favorites</span>
+    </div>
+    <div class="nx-mediaControl">
+        <a href="https://www.flaticon.com/free-icons/music-control" title="Music control icons created by nawicon - Flaticon"></a>
+        <img src="https://i.imgur.com/9AcxbBz.png" style="margin-left: 5%;margin-right: 2%;">
+        <img id="playbutton" onclick="playbutton()" src="https://i.imgur.com/3ah2aKl.png" style="margin-left: 4%;margin-right: 4%;">
+        <img src="https://i.imgur.com/UJS8V6H.png" style="margin-left: 2%;margin-right: 12%;">
+        
+        <img class="volumeDown" onclick="volumeUp()" src="https://i.imgur.com/lqQdPud.png" style="margin-left: 2%;margin-right: 2%;width: 5%;">
+        <input type="range" min="0" max="100" value="0">
+        <img class="volumeUp" onclick="volumeDown()" src="https://i.imgur.com/FquSRrD.png" style="margin-left: 2%;margin-right: 2%;width: 5%;">
+    </div>
+
+    <div id="nx-container">
+        <div class="nx-playList">
+            <ul>
+                <li><img src="https://i.scdn.co/image/ab67616d0000485187a9495fd25dfa23e68a9e66"><span class="nx-musicName">Cain$aw</span><span class="nx-musicArtist">scarlxrd</span></li>
+                <li><img src="https://i.scdn.co/image/ab67616d0000485187a9495fd25dfa23e68a9e66"><span class="nx-musicName">Cain$aw</span><span class="nx-musicArtist">scarlxrd</span></li>
+                <li><img src="https://i.scdn.co/image/ab67616d0000485187a9495fd25dfa23e68a9e66"><span class="nx-musicName">Cain$aw</span><span class="nx-musicArtist">scarlxrd</span></li>
+            </ul>
+        </div>
+
+        <div class="nx-nowPlaying">
+            
+        </div>
+    </div>
+</body>
+</html>
